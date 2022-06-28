@@ -23,17 +23,17 @@ const Create = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addCategory({ cat: name }));
+    dispatch(addCategory({ name }));
   };
 
   const handleSubmitItem = (event) => {
     event.preventDefault();
-    dispatch(addItem({ item: name, category, image }));
+    dispatch(addItem({ name, category, image }));
   };
   return (
     <>
       <div className="categoryContainer">
-        <h1> Crear elemento </h1>
+        <h1> Create element </h1>
         <Tabs
           id="controlled-tab-example"
           activeKey={key}
