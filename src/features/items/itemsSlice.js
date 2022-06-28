@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // import { fetchCount } from "./counterAPI";
 
 const initialState = {
-  items: [{ name: "feli", image: "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/509ffcfb512056e813c9070a614fbf77/6/4/64809_10.jpg" , category: 'farmacia'}],
+  items: [{ name: "feli", image: "https://http2.mlstatic.com/D_Q_NP_713265-MLU44535181857_012021-AC.webp" , category: 'farmacia'}],
 };
 
 export const itemsSlice = createSlice({

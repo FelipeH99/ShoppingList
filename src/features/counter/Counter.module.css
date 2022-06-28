@@ -5,8 +5,8 @@
 }
 
 .row > button {
-  margin-left: 4px;
-  margin-right: 8px;
+  margin-left: 0;
+  margin-right: 0;
 }
 .row:not(:last-child) {
   margin-bottom: 16px;

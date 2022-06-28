@@ -4,16 +4,12 @@ import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import Items from "./features/items/Items";
 import Categories from "./features/category/Category";
+import Router from "./routes/Router"
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="Shopping-List">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <Categories></Categories>
-      </header>
-    </div>
+    <Router/>
   );
 }
 
