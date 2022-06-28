@@ -23,17 +23,13 @@ const Create = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    dispatch(addCategory({ name }));
+    dispatch(addCategory({ cat: name }));
   };
 
   const handleSubmitItem = (event) => {
     event.preventDefault();
-    dispatch(addItem({ name, category, image })); //category?
+    dispatch(addItem({ item: name, category, image }));
   };
-  /* function handlesubmit(e) {
-    e.preventDefault();
-    addcategory(dispatch);
-  }*/
   return (
     <>
       <div className="categoryContainer">
