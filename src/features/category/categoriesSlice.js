@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  categories: [{ name: "farmacia" }, { name: "Comida" }],
+  categories: [{ name: "Pharmacy" }, { name: "Food" }],
 };
 
 export const categorySlice = createSlice({

@@ -39,27 +39,7 @@ const Category = () => {
             </div>
           );
         })}
-
-        <Button onClick={() => navigate("/create")} className="addButton">
-          + Add Item/Category
-        </Button>
       </div>
-      <Modal
-        show={showModal}
-        size="lg"
-        centered
-        onHide={() => setShowModal(false)}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <CloseButton />
-          <Button variant="secondary">Close</Button>
-          <Button variant="primary">Save Changes</Button>
-        </Modal.Footer>
-      </Modal>
     </>
   );
 };

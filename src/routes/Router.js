@@ -4,6 +4,7 @@ import { useRoutes } from "react-router-dom";
 import ShoppingLayout from "./../layout/ShoppingLayout";
 import Category from "./../features/category/Category";
 import Create from "./../features/create/Create";
+import Favorite from "./../features/favorites/Favorite";
 
 import Items from "./../features/items/Items";
 
@@ -20,6 +21,10 @@ export default function Router() {
         {
           path: "/create",
           element: <Create />,
+        },
+        {
+          path: "/favorites",
+          element: <Favorite />,
         },
       ],
     },

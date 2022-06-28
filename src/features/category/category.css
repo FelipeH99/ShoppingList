@@ -5,13 +5,24 @@
     align-items: center;
     padding-top: 60px;
     gap:20px;
+
+    padding-bottom: 60px;
+   
 }
 
 .item{
     text-align: center;
-    border: 2px solid rgba(128, 128, 128, 0.55);
+    position:relative;
     padding: 10px;
+    color: rgb(228, 234, 238);
+    background-color: #343a40a5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
 
+}
+
+.item:hover{
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .addButton{

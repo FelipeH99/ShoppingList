@@ -5,11 +5,11 @@
     padding-top: 60px;
     position: absolute;
     margin-left: 0;
+    z-index: 200;
 }
 
 .header{
     position: fixed;
-    font-size: 30 px;
     text-align: center;
     z-index: 200;
     color: aliceblue;

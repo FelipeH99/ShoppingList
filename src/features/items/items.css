@@ -1,0 +1,21 @@
+.container{
+    width: auto;
+    height: auto;
+}
+
+.card-text{
+    color:black
+
+}
+
+
+.itemsCarousel{
+    width: 320px;
+}
+
+.imageitem{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit:contain;
+    margin-bottom: 30px;
+}

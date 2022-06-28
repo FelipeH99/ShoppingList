@@ -13,13 +13,13 @@ export default function ShoppingLayout() {
             <Navbar.Brand>Shopping List</Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/categories">
-                Categorias
+                Categories
               </Nav.Link>
               <Nav.Link as={Link} to="/create">
                 Create
               </Nav.Link>
               <Nav.Link as={Link} to="/favorites">
-                Favoritos
+                Favorites
               </Nav.Link>
             </Nav>
           </Container>

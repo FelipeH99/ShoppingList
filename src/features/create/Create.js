@@ -3,26 +3,33 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 // import { actionCreators } from "../../app/actions";
 import ReactDOM from "react-dom/client";
-import categoriesSlice from "../category/categoriesSlice";
 
 import { Button, Form, Tabs, Tab, NavItem } from "react-bootstrap";
 
 import "./create.css";
 import { addCategory } from "../category/categoriesSlice";
 import Category from "../category/Category";
+import { addItem } from "../items/itemsSlice";
 
 const Create = () => {
   const dispatch = useDispatch();
 
   const navigate = useNavigate();
   const [key, setKey] = useState("category");
-  const [name, setName] = useState("category");
+  const [name, setName] = useState("");
+  const [keyi, setKeyI] = useState("item");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addCategory({ name }));
   };
 
+  const handleSubmitItem = (event) => {
+    event.preventDefault();
+    dispatch(addItem({ name, category, image })); //category?
+  };
   /* function handlesubmit(e) {
     e.preventDefault();
     addcategory(dispatch);
@@ -47,9 +54,6 @@ const Create = () => {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
               </Form.Group>
               <Button variant="primary" type="submit">
                 Submit
@@ -57,26 +61,40 @@ const Create = () => {
             </Form>
           </Tab>
           <Tab eventKey="item" title="Item">
-            <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form onSubmit={handleSubmitItem}>
+              <Form.Group className="mb-3" controlId="">
                 <Form.Label>Item name</Form.Label>
-                <Form.Control type="Name" placeholder="Enter Name" />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
+                <Form.Control
+                  type="Name"
+                  placeholder="Enter Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <Form.Text className="text-muted"></Form.Text>
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group className="mb-3" controlId="text">
                 <Form.Label>Category</Form.Label>
-                <Form.Control type="password" placeholder="Enter Category" />
+                <Form.Control
+                  type="category"
+                  placeholder="Enter Category"
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Image</Form.Label>
-                <Form.Control type="password" placeholder="Enter Image Url" />
+                <Form.Control
+                  placeholder="Enter Image Url"
+                  type="text"
+                  value={image}
+                  onChange={(e) => setImage(e.target.value)}
+                />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-              </Form.Group>
+              <Form.Group
+                className="mb-3"
+                controlId="formBasicCheckbox"
+              ></Form.Group>
 
               <Button variant="primary" type="submit">
                 Submit
@@ -88,10 +106,4 @@ const Create = () => {
     </>
   );
 };
-/*
-<input
-type="text"
-value={name}
-onChange={(e) => setName(e.target.value)}
-/>*/
 export default Create;
